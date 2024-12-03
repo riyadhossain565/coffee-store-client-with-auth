@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/more/logo1.png";
+import navbarImg from "../assets/more/15.jpg";
 
 const Navbar = () => {
   const links = (
@@ -74,7 +75,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-navbar">
+    <div style={{ backgroundImage: `url(${navbarImg})` }} className="w-full">
       <div className="navbar w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
