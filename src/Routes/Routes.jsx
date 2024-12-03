@@ -18,7 +18,8 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/coffee"),
+        loader: () =>
+          fetch("https://coffee-store-server-omega-inky.vercel.app/coffee"),
       },
       {
         path: "addCoffee",
@@ -28,13 +29,17 @@ const Routes = createBrowserRouter([
         path: "updateCoffee/:id",
         element: <UpdatedCoffee />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffee/${params.id}`),
+          fetch(
+            `https://coffee-store-server-omega-inky.vercel.app/coffee/${params.id}`
+          ),
       },
       {
         path: "viewCoffee/:id",
         element: <ViewCoffee />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/coffee/${params.id}`),
+          fetch(
+            `https://coffee-store-server-omega-inky.vercel.app/coffee/${params.id}`
+          ),
       },
       {
         path: "signIn",
@@ -47,7 +52,8 @@ const Routes = createBrowserRouter([
       {
         path: "users",
         element: <Users />,
-        loader: () => fetch("http://localhost:5000/users/"),
+        loader: () =>
+          fetch("https://coffee-store-server-omega-inky.vercel.app/users/"),
       },
     ],
   },
